@@ -6,16 +6,18 @@ on:
       - main
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: get secret value
         env:
-           DB_USERNAME_KEY : ${{secret.DB_USERNAME}}
-        run: python test.py 
+          DB_USERNAME_KEY: ${{ secrets.DB_USERNAME }}
 
+        run: python test.py
       
 
