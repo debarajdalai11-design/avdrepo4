@@ -3,19 +3,19 @@ name: workflow demo2
 on:
   push:
     branches:
-     - main
+      - main
 
 jobs:
-  job1:
-     runs-on: ubunutu_latest
-     steps:
-     - name: checkout code
-       uses: actions/checkout2v2
-       
-     - name: pip install pandas
 
-     - name: run test.py
-       run: python test.py  
-      
- 
-      
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: pip install pandas
+        run: pip install pandas
+
+      - name: run test.py
+        run: python test.py
