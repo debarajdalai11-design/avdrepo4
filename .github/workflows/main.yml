@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: pip install pandas
-        run: pip install pandas
+        run: pip install -r requirments.txt
 
       - name: run test.py
         run: python test.py
